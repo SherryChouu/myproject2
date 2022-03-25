@@ -1,4 +1,4 @@
-package com.sherry;
+package com.sherry.score;
 
 public class scoringNG {
     public static void main(String[] args) {

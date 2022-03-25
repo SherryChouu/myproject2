@@ -1,5 +1,4 @@
-package com.sherry;
-
+package com.sherry.score;
 public class Student {
     String name;
     int english;
@@ -12,11 +11,17 @@ public class Student {
         this.english = english;
         this.math = math;
     }
+    public Student(){
+        this("John",60,70);
+    }
     public void print(){
-        int average = (english+math/2);
-        System.out.println(name + "/t" + english + "/t" + math + "/t");
-        if (average < 60){
+        System.out.println(name + "/t" + english + "/t" + math + "/t" + getAverage());
+        if (getAverage() < 60){
             System.out.println("*");
         }
+        System.out.println();
+    }
+    public int getAverage(){
+        return (english+math)/2;
     }
 }
