@@ -1,4 +1,8 @@
-package com.sherry;
+package com.sherry.sales;
+
+import com.sherry.sales.Customer;
+import com.sherry.sales.GoldenCustomer;
+import com.sherry.sales.SilverCustomer;
 
 public class SalesTester {
     public static void main(String[] args) {

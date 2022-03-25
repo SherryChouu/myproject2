@@ -1,4 +1,4 @@
-package com.sherry;
+package com.sherry.sales;
 
 public class Customer {
     String id;
@@ -12,7 +12,7 @@ public class Customer {
         return(amount/1000)*off*1000;
     }
     public void print(){
-        //float money = amount-getOffMoney();
+        //float money = amount-backMoney();
         System.out.println(id + "\t" + amount + "\t" + (amount-backMoney()));
     }
 }

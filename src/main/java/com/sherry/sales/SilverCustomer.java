@@ -1,6 +1,8 @@
-package com.sherry;
+package com.sherry.sales;
 
-public class SilverCustomer extends Customer{
+import com.sherry.sales.Customer;
+
+public class SilverCustomer extends Customer {
 
     public SilverCustomer(String id, int amount){
         super(id , amount);
