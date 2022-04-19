@@ -7,6 +7,10 @@ import com.sherry.sales.SilverCustomer;
 import java.util.ArrayList;
 import java.util.List;
 
+//一般客戶-滿千送百
+//銀級客戶-滿千送百，再送百元還元金
+//金級客戶-滿千送兩百，再送二百還元金
+
 public class SalesTester {
     public static void main(String[] args) {
         List<Customer> customers = new ArrayList<>();
@@ -21,7 +25,6 @@ public class SalesTester {
         for(Customer c: customers) {
             c.print();
         }
-
         Customer c1 = new Customer("001",1200);
         Customer c2 = new Customer("002",800);
         SilverCustomer c3 = new SilverCustomer("003",2000);

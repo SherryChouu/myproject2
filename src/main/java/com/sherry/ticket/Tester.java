@@ -47,5 +47,6 @@ public class Tester {
                 ticket = new Ticket(start, destination);
                 break;
         }
+        ticket.print();
     }
 }
