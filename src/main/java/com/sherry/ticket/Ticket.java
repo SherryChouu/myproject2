@@ -1,37 +1,27 @@
 package com.sherry.ticket;
 
 public class Ticket {
-    public static final int TAIPEI_STATION = 100;
-    public static final int TAICHUNG_STATION = 200;
-    public static final int KAOHSIUNG_STATION = 300;
-
     Station start;
     Station destination;
-    int price;
-    public Ticket(Station start, Station destination){
+    int amount;
+    public Ticket(Station start, Station destination,int amount) {
         this.start = start;
         this.destination = destination;
-        if(start == Station.TAIPEI_STATION){
-            if(destination == Station.TAICHUNG_STATION) {
-                price = 600;
-            }else {
-                price = 1500;
-            }
-        }else if(start == Station.TAICHUNG_STATION){
-            if(destination == Station.TAIPEI_STATION) {
-                price = 600;
-            }else {
-                price = 900;
-            }
-        }else if(start == Station.KAOHSIUNG_STATION){
-            if(destination == Station.TAICHUNG_STATION){
-                price = 900;
-            }else {
-                price = 1500;
-            }
-        }
+        this.amount = amount;
     }
-    public void print() {
-        System.out.println(start.name + "\t" + destination.name + "\t" + price);
+
+    public float price(){
+        int distance = destination.id - start.id;
+        if(destination.id == 200 && start.id == 100 || start.id == 200 && destination.id == 100){
+            return 600;
+        }else if(destination.id == 300 && start.id == 200 || start.id == 300 && destination.id == 200){
+            return 900;
+        }else if(Math.abs(distance) == 200){
+            return 1500;
+        }
+        return 0;
+    }
+    public void print(){
+        System.out.println("normal ticket" + "\t" + start.name + "to" + destination.name + "\t" + amount + "\t" + price()*amount );
     }
 }
