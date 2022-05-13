@@ -4,6 +4,7 @@ public class Ticket {
     Station start;
     Station destination;
     int amount;
+
     public Ticket(Station start, Station destination, int amount){
         this.start = start;
         this.destination = destination;
@@ -15,7 +16,7 @@ public class Ticket {
             return 600;
         }else if(start.id == 200 && destination.id ==300 || destination.id == 200 && start.id ==300) {
             return 900;
-        }else if(Math.abs(distance) == 200){
+        }else if(Math.abs(distance) == 200) {
             return 1500;
         }
         return 0;

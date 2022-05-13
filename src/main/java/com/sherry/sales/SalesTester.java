@@ -18,7 +18,7 @@ public class SalesTester {
         for (int i = 0; i < 5; i++) {
             customers.get(i).print();
         }
-        for (Customer c : customers) {
+        for(Customer c: customers){
             c.print();
         }
     }
