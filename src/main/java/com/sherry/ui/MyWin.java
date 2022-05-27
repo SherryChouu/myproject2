@@ -13,15 +13,17 @@ public class MyWin {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         //add Component
         JButton button = new JButton("OK");
-        button.addActionListener(new ActionListener() {
+       button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Hello world!!");
             }
         });
 
-        //button.addActionListener(listener);
+       // MyActionlistener listener = new MyActionlistener();
+       // button.addActionListener(listener);
         //Layout
+        //frame.setLayout(new BorderLayout());
         frame.setLayout(new FlowLayout());
         frame.add(button);
 
